@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=SQLAdmin
+Comment=JDBC SQL Client tool
+Comment[es]=Cliente SQL JDBC
+Exec=sqladmin
+Terminal=false
+Type=Application
+Icon=sqladmin.png
+Categories=GNOME;Application;Development;X-Red-Hat-Base;
+StartupNotify=true
+X-Desktop-File-Install-Version=0.3

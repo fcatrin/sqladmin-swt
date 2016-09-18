@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: gnu.sql.tools.sqladmin.SqlAdmin
+Created-By: Tuxpan
+Implementation-Vendor: Tuxpan Software S.A.
+Class-Path: /usr/lib/java/swt.jar /usr/lib/java/swt-pi.jar
+Implementation-Title: SqlAdmin
+Implementation-Version: 0.2.2

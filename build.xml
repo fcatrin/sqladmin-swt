@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build jar" name="build">
+  <property location="src" name="src-dir"/>
+  <property location="build" name="bin-dir"/>
+  <property location="build" name="build-dir"/>
+  <property location="deploy" name="deploy-dir"/>
+  <property name="version" value="0.2.2" />
+
+  <target name="init">
+    <mkdir dir="${bin-dir}" />
+    <mkdir dir="${build-dir}" />
+    <mkdir dir="${deploy-dir}" />
+    <copy todir="${bin-dir}">
+	<fileset dir="${src-dir}">
+	    <include name="**/*.gif"/>
+	</fileset>
+    </copy>
+  </target>
+
+  <target name="touch" depends="init">
+    <touch>
+      <fileset
+        includes="**/*.java"
+        dir="${src-dir}"
+      />
+    </touch>
+  </target>
+
+
+  <target name="build jar" depends="compile">
+    <jar
+      basedir="${build-dir}"
+      destfile="${deploy-dir}/sqladmin.jar"
+      includes="**/*.class"
+    />
+  </target>
+
+  <target name="run" depends="dist-bin">
+    <java
+      fork="true"
+      jar="sqladmin-${version}.jar"
+      classpath="${bin-dir}:/usr/lib/java/swt.jar:/usr/lib/java/swt-pi.jar:${java.class.path}"
+    >
+	<jvmarg line="-Djava.library.path=/usr/lib" />
+	<arg line="" /> 
+    </java>
+  </target>
+
+  <target name="compile" depends="init">
+    <javac
+      srcdir="${src-dir}"
+      destdir="${bin-dir}"
+      debug="on"
+      classpath="/usr/lib/java/swt.jar:/usr/lib/java/swt-pi.jar"
+    />
+  </target>
+  
+  <target name="dist">
+  	<mkdir dir="${deploy-dir}/dist/sqladmin-${version}" />
+	<copy todir="${deploy-dir}/dist/sqladmin-${version}">
+		<fileset dir="." includes="**/*.java" />
+		<fileset dir="." includes="src/**/.sqladminrc" />
+		<fileset dir="." includes="src/**/*.gif" />
+		<fileset dir="." includes="src/**/*.png" />
+		<fileset dir="." includes="build.xml" />
+		<fileset dir="." includes="README" />
+		<fileset dir="." includes="ChangeLog" />
+		<fileset dir="." includes="MANIFEST.MF" />
+		<fileset dir="." includes="sqladmin.spec" />
+		<fileset dir="." includes="sqladmin.desktop" />
+		<fileset dir="." includes="sqladmin.png" />
+		<fileset dir="." includes="run.sh" />
+	</copy>
+	<tar compression="gzip" tarfile="sqladmin-${version}.tar.gz" basedir="${deploy-dir}/dist" />
+	<delete dir="${deploy-dir}/dist" />
+  </target>
+  
+  <target name="dist-bin" depends="compile">
+  	<mkdir dir="${deploy-dir}/dist" />
+	<copy todir="${deploy-dir}/dist">
+		<fileset dir="build" includes="**/*.class" />
+		<fileset dir="src" includes="**/*.gif" />
+		<fileset dir="src" includes="**/*.png" />
+		<fileset dir="src" includes="**/.sqladminrc" />
+		<fileset dir="." includes="README" />
+		<fileset dir="." includes="ChangeLog" />
+	</copy>
+	<jar jarfile="sqladmin-${version}.jar" basedir="${deploy-dir}/dist" 
+		manifest="MANIFEST.MF" />
+	<delete dir="${deploy-dir}/dist" />
+  </target>
+
+</project>

@@ -1,0 +1,15 @@
+
+Current implemented features:
+----------------------------
+
+* Abstract JDBC driver backend.  User should configure only
+  basic parameters like server, port, and login without the
+  need to know about Class names or JDBC URL's
+* Graphical view of connections and database metadata such
+  as schemas, tables and fields
+* Multiple query execution.  Also supports embedded comments
+  on SQL Text
+* Log window to view system messages and query results
+* Table structure view
+* Fast table rows view
+

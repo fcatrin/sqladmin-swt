@@ -1,0 +1,54 @@
+	SQLAdmin 0.2.2
+
+1. Overview
+
+SQLAdmin is a Java SQL client tool.
+You can run queries against any JDBC supported database using
+a simple graphical user interface (GTK2 based on Linux)
+
+2. Runtime requirements
+
+* Java Runtime Environment JRE 1.4+
+* Eclipse SWT libraries
+
+You will need a specific JDBC driver for your database as well.
+SQLadmin has been successfully tested with PostgreSQL, MySQL, Oracle 
+and MS-SQL server.
+
+
+3. Compiling SQLAdmin
+
+If you want to build binaries from source, you will need:
+
+* Java Software Development Kit SDK 1.4+
+* Jakarta ant 
+* Eclipse SWT libraries
+
+SQLAdmin compilation is driven by ant.  All you have to do
+is to invoke ant with the required parameter.
+
+no parameters : compile
+dist : build the source distribution
+dist-bin : build the binary distribution
+
+
+4. References:
+
+Sun's JRE/SDK
+http://java.sun.com/j2se/1.4.2/download.html
+
+Eclipse SWT libraries all platforms
+http://download.eclipse.org/downloads/drops/S-3.0M6-200312182000/index.php
+
+Eclipse SWT libraries, Fedora Core 1 RPMS
+http://www.tuxpan.com/fcatrin/swt  (RPM packages)
+
+Jakarta ant
+http://ant.apache.org/
+
+SQLAdmin Home Page
+http://sqladmin.sf.net
+
+--
+Franco Catrin L.
+http://www.tuxpan.com/fcatrin

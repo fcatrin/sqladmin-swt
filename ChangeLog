@@ -1,0 +1,89 @@
+	============= RELEASE 0.2.2 ==============
+
+
+2004-01-06  Franco Catrin L. <fcatrin@tuxpan.com>
+
+        * Added Dialog Editor for custom Classpath
+
+2003-12-31  Franco Catrin L. <fcatrin@tuxpan.com>
+
+        * Added Linux specific files to build RPM package
+
+2003-11-26  Franco Catrin L. <fcatrin@tuxpan.com>
+
+        * Changed from make to ant to build the app
+
+2003-11-25  Franco Catrin L. <fcatrin@tuxpan.com>
+
+        * Fixed default setting
+	* Changed some critical methods to static
+
+2003-02-05  Franco Catrin L. <fcatrin@tuxpan.cl>
+
+        * Added new ToolBar helper classes
+
+2003-01-24  Franco Catrin L. <fcatrin@tuxpan.cl>
+
+        * Changed event handling to one class
+
+2003-01-24  Franco Catrin L. <fcatrin@tuxpan.cl>
+
+        * Added About dialog
+	* Added GUIUtil class for GUI helper static methods
+
+2003-01-20  Franco Catrin L. <fcatrin@tuxpan.cl>
+
+        * Show only avalaible Schemas
+				
+	============= RELEASE 0.2.1 ==============
+
+
+2002-11-11	Franco Catrin L. <fcatrin@tuxpan.cl>
+		
+		* SQL Query now is showed separately from resultset
+		
+		
+2002-11-10	Franco Catrin L. <fcatrin@tuxpan.cl>
+
+		* Better table column width adjustment
+
+
+2002-11-09	Franco Catrin L. <fcatrin@tuxpan.cl>
+
+		* Added GUI Connection removal
+		* Added generic View Pane and toolbar
+		* Better Tab Handling
+		
+
+    ============= RELEASE 0.2.0 ==============
+
+2002-11-08	Franco Catrin L. <fcatrin@tuxpan.cl>
+
+		* Added GUI Connection creation
+
+2002-11-07	Franco Catrin L. <fcatrin@tuxpan.cl>
+	
+		* Added Table structure view
+		
+2002-11-05	Franco Catrin L. <fcatrin@tuxpan.cl>
+	
+		* Reorganized menu and tool bars (new icons included)
+
+2002-10-31	Franco Catrin L. <fcatrin@tuxpan.cl>
+	
+		* Configuration can be saved
+
+2002-10-26	Franco Catrin L. <fcatrin@tuxpan.cl>
+	
+		* Everything changed to package gnu.sql.tools.sqladmin
+		* Lot of modifications to fix scope
+
+2002-10-24	Max Celedon C. <hydefus@inf.utfsm.cl>
+
+		* Fixed resultset panel dispose bug
+
+
+2002-10-24	Franco Catrin L. <fcatrin@tuxpan.cl>
+
+		* ChangeLog and other project related files created
+		* Fixed makefile to be independant from eclipse tree

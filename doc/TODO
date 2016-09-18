@@ -1,0 +1,11 @@
+
+Things that must be done ordered by priority:
+---------------------------------------------
+
+* Refresh Table Structure View
+* Save View (if applicable)
+* Automatic load of JDBC drivers
+* Asyncrhronous queries
+* Text views such as XML or plain text output
+* Database Driver information
+* SQL Syntax Highlighting
